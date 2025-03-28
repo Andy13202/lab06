@@ -15,5 +15,5 @@ pip3 install flask requests --break-system-packages
 nano chatbot.py
 python3 chatbot.py
 
-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
+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
 curl -X POST http://<your-raspberry-pi-ip>:5000/chat -H "Content-Type: application/json" -d '{"message": "Hello, how are you?"}'
