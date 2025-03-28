@@ -1,45 +1,10 @@
-過程 :
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install python3-pip
-sudo apt-get install python3-numpy
-sudo apt-get update
-sudo apt-get install python3-opencv
-python3 -c "import cv2; print(cv2.__version__)"這條命令應該會顯示出安裝的OpenCV版本，確認無誤表明安裝成功
-
---------------------------以上為上週沒做或沒成功地要先安裝--------------------------------
-
-git clone https://github.com/Andy13202/lab06.git
-cd lab06
-pip3 install flask requests --break-system-packages
-nano chatbot.py
-python3 chatbot.py
-
 AIzaSyCeZRz0ALQPUuaxzOpLDvZJ-sqigNhX_vI
-
-curl -X POST http://<your-raspberry-pi-ip>:5000/chat -H "Content-Type: application/json" -d '{"message": "Hello, how are you?"}'
 
 curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyCeZRz0ALQPUuaxzOpLDvZJ-sqigNhX_vI" \
 -H 'Content-Type: application/json' \
 -X POST \
 -d '{
   "contents": [{
-    "parts":[{"text": "Explain how AI works"}]
+    "parts":[{"text": "How are you?"}]
     }]
    }'
-
-
-curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=YOUR_API_KEY" \
--H 'Content-Type: application/json' \
--X POST \
--d '{
-  "contents": [{
-    "parts": [{"text": "Explain how AI works"}]
-  }],
-  "config": {
-    "max_output_tokens": 150,
-    "temperature": 0.7,
-    "top_p": 0.9,
-    "top_k": 40
-  }
-}'
