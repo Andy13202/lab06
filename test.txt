@@ -14,14 +14,6 @@ cd lab06
 pip3 install flask requests --break-system-packages
 nano chatbot.py
 python3 chatbot.py
-AIzaSyBwowF8XlcnHbIAdRa8yATN9XhRVrCJ35o
-curl -X POST http://<your-raspberry-pi-ip>:5000/chat -H "Content-Type: application/json" -d '{"message": "Hello, how are you?"}'
 
-curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=AIzaSyBwowF8XlcnHbIAdRa8yATN9XhRVrCJ35o" \
--H 'Content-Type: application/json' \
--X POST \
--d '{
-  "contents": [{
-    "parts":[{"text": "Explain how AI works"}]
-    }]
-   }'
+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
+curl -X POST http://<your-raspberry-pi-ip>:5000/chat -H "Content-Type: application/json" -d '{"message": "Hello, how are you?"}'
