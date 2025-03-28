@@ -16,4 +16,5 @@ nano chatbot.py
 python3 chatbot.py
 
 123AIzaSyCeZRz0ALQPUuaxzOpLDvZJ-sqigNhX_vI
-curl -X POST http://<your-raspberry-pi-ip>:5000/chat -H "Content-Type: application/json" -d '{"message": "Hello, how are you?"}'
+curl -X POST http://localhost:5000/chat -H "Content-Type: application/json" -d '{"message": "Hello, how are you?"}'
+
