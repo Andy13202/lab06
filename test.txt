@@ -11,7 +11,7 @@ python3 -c "import cv2; print(cv2.__version__)"這條命令應該會顯示出安
 
 git clone https://github.com/Andy13202/lab06.git
 cd lab06
-pip3 install flask requests
+pip3 install flask requests --break-system-packages
 nano chatbot.py
 python3 chatbot.py
 
