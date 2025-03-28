@@ -10,7 +10,7 @@ def chat():
     return jsonify(response)
 
 def query_gemini(text):
-    api_key = "YOUR_ACTUAL_API_KEY"  # 替换为你的实际 API 密钥
+    api_key = "AIzaSyBwowF8XlcnHbIAdRa8yATN9XhRVrCJ35o"  # 使用正确的 API 密钥
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -30,6 +30,7 @@ def query_gemini(text):
         return response.json()  # 返回 JSON 响应
     else:
         return {'error': 'API call failed or returned non-JSON data', 'status_code': response.status_code}
+
 
 
 if __name__ == '__main__':
