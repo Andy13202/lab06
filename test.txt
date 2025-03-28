@@ -1,6 +1,6 @@
 AIzaSyCeZRz0ALQPUuaxzOpLDvZJ-sqigNhX_vI
 
-curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=Your API Number" \
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=Your API Key" \
 -H 'Content-Type: application/json' \
 -X POST \
 -d '{
