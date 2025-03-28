@@ -1,30 +1,22 @@
-from flask import Flask, request, jsonify
 import requests
+import json
 
-app = Flask(__name__)
-
-@app.route('/chat', methods=['POST'])
-def chat():
-    user_input = request.json.get('message')
-    response = query_gemini(user_input)
-    return jsonify(response)
-
-def query_gemini(text):
-    api_key = "YOUR_API_KEY"
+def query_gemini(query):
     url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
     headers = {
-        "Authorization": f"Bearer {api_key}",
+        "Authorization": "Bearer AIzaSyCeZRz0ALQPUuaxzOpLDvZJ-sqigNhX_vI",
         "Content-Type": "application/json"
     }
     payload = {
         "contents": [
             {
-                "parts": [{"text": text}]
+                "parts": [{"text": query}]
             }
         ]
     }
     response = requests.post(url, headers=headers, json=payload)
     return response.json()
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+# 使用例子
+result = query_gemini("Explain how AI works")
+print(json.dumps(result, indent=4))
